@@ -4,7 +4,7 @@ Class {
 	#category : #BaselineOfFamixNGSlides
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #baseline }
 BaselineOfFamixNGSlides >> baseline: spec [
 	<baseline>
 	spec
@@ -15,21 +15,23 @@ BaselineOfFamixNGSlides >> baseline: spec [
 			self defineGroups: spec ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #baseline }
 BaselineOfFamixNGSlides >> defineDependencies: spec [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #baseline }
 BaselineOfFamixNGSlides >> defineGroups: spec [
 	spec
-		group: 'default' with: #('FamixNG-Slides-Generator' 'FamixNG-Slides-Tests')
+		group: 'default' with: #('FamixNG-Slides-Generator' 'FamixNG-Slides-Tests');
+		group: 'binding' with: #('default' 'FamixNG-SlidesSmalltalk-Generator')
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #baseline }
 BaselineOfFamixNGSlides >> definePackages: spec [
 	spec
 		repository: 'https://github.com/juliendelplanque/FamixNG-Slides';
 		package: 'FamixNG-Slides-Generator';
-		package: 'FamixNG-Slides-Tests'
+		package: 'FamixNG-Slides-Tests';
+		package: 'FamixNG-SlidesSmalltalk-Generator'
 ]
